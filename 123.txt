@@ -1,0 +1,20 @@
+      pipeline {
+        agent any 
+        stages {
+          stage('Pull-Code') { 
+            steps {
+              git credentialsId: 'gitlab', url: ''https://github.com/ejaz-hub/test.git 
+            }
+          }
+          stage('Test') { 
+            steps {
+              sh label: '', script: 'pwd'
+            }
+          }
+          stage('Deploy') { 
+            steps {
+              echo 'Deployed'
+            }
+          }
+        }
+      }
