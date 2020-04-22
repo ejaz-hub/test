@@ -3,7 +3,7 @@
         stages {
           stage('Pull-Code') { 
             steps {
-              git credentialsId: 'gitlab', url: ''https://github.com/ejaz-hub/test.git 
+              git credentialsId: 'gitlab', url: 'https://github.com/ejaz-hub/test.git'
             }
           }
           stage('Test') { 
